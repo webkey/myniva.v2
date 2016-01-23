@@ -1,0 +1,43 @@
+@media only screen and (max-width: 639px){}
+/*user content*/
+/*element form*/
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], textarea{ margin: 0 0 18px; }
+.form-row{ margin: 0 -9px; }
+.form-row .input-wrap{ padding: 0 9px; }
+.form-row, .input-wrap { padding: 0 0 18px; }
+/*element form end*/
+/*user content end*/
+
+/*product container*/
+.prod-tab.opened-tab,
+.prod-tab.made-active {
+	padding: 14px 20px;
+}
+/*product container end*/
+
+/*callback form*/
+.callback-form{
+	padding: 22px 20px;
+}
+.callback-form .callback-popup-title {
+	font-size: 22px;
+	line-height: 24px;
+	padding: 0 20px 22px;
+}
+.callback-form textarea {
+	min-height: 90px;
+	height: 90px;
+}
+/*callback form end*/
+
+/*widget.css*/
+/*fancybox*/
+.fancybox-inner {
+	overflow: visible !important;
+	height: auto !important;
+}
+.fancybox-overlay-fixed{
+	overflow-y: auto !important;
+}
+/*fancybox end*/
+/*widget.css end*/

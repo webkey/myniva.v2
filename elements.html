@@ -1,0 +1,564 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>WebSite - Elements</title>
+	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--Mobile optimized-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- Favicon -->
+	<link href="favicon.ico" rel="shortcut icon">
+	<!-- Main style -->
+	<link href="css/all.css" rel="stylesheet" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<!-- style for IE -->
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" media="screen, projection"><![endif]-->
+
+	<!-- JQuery library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- JQuery UI -->
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- Widgets -->
+	<script src="__temp/SCRIPT_WIDGETS.js"></script>
+	<!-- Main functions -->
+	<script src="__temp/SCRIPTS.js"></script>
+	<!-- wrapper end -->
+	<style>
+		.example-set-icons{ background: #fff; border: 1px solid rgba(0,0,0,0.12); border-radius: 4px; padding: 6px; margin-left: 25%; width: 75%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+		h1, h2, h3, h4, h5, h6{ font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif; font-weight: 400; margin: 0; color: #4d4d4d; }
+		/*navigation*/
+		.nav-list > li{ display: inline-block; margin-right: 10px; position: relative; }
+		.nav-list > li:before {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 0;
+			content: "";
+			-moz-transition: all 0.3s ease 0s;
+			-o-transition: all 0.3s ease 0s;
+			-webkit-transition: all 0.3s ease 0s;
+			 transition: all 0.3s ease 0s;
+			-moz-transform: translatex(0%) translatey(-50%);
+			-ms-transform: translatex(0%) translatey(-50%);
+			-o-transform: translatex(0%) translatey(-50%);
+			 -webkit-transform: translatex(0%) translatey(-50%);
+			 transform: translatex(0%) translatey(-50%);
+			color: #2c3e50;
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			border-radius: 2px;
+			background: none repeat scroll 0 0 #656b7b
+		}
+		.nav-list > li:hover:before { height: 80%; }
+		.nav-list > li > a { position: relative; display: block; padding: 10px 15px; }
+		.nav-list > li > ul {
+			position: absolute;
+			top: 100%;
+			display: none;
+			background: #fff;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 5px;
+			/*animation-name*/
+			-webkit-animation-name: fadeInDown;
+			-moz-animation-name: fadeInDown;
+			-ms-animation-name: fadeInDown;
+			-o-animation-name: fadeInDown;
+			animation-name: fadeInDown;
+			/*animation-duration*/
+			-webkit-animation-duration: .4s;
+			-moz-animation-duration: .4s;
+			-ms-animation-duration: .4s;
+			-o-animation-duration: .4s;
+			animation-duration: .4s;
+			animation-fill-mode: both;
+		}
+		@-webkit-keyframes fadeInDown {
+			0% {
+				-webkit-transform: translateY(-20px);
+				-moz-transform: translateY(-20px);
+				-ms-transform: translateY(-20px);
+				transform: translateY(-20px);
+				opacity: 0;
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+		@keyframes fadeInDown {
+			0% {
+				-webkit-transform: translateY(-20px);
+				-moz-transform: translateY(-20px);
+				-ms-transform: translateY(-20px);
+				transform: translateY(-20px);
+				opacity: 0;
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+		.nav-list > li:hover > ul { display: block; }
+		/*navigation end*/
+
+		/*set icons*/
+		.example-set-icons ul{ list-style: none; padding: 0 0 20px; margin: 0; }
+		.example-set-icons ul li{ list-style: none; line-height: 0; padding: 6px; border: 1px solid #ccc; background: #f0f0f0; vertical-align: top; position: relative; margin: 0 0 5px; }
+		.example-set-icons ul .exmp-icon-tooltip{ position: absolute; right: 100%; top: 50%; font-size: 14px; line-height: 18px; color: #000; margin:-45px 20px 0 0; border: 1px solid #ccc; white-space: nowrap; background-color: #fff; }
+		.example-set-icons ul .exmp-icon-tooltip:after, .example-set-icons ul .exmp-icon-tooltip:before{ left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; margin: 0 0 0 1px; }
+		.example-set-icons ul .exmp-icon-tooltip:after{ border-color: rgba(255, 255, 255, 0); border-left-color: #fff; border-width: 14px; margin-top: -14px; }
+		.example-set-icons ul .exmp-icon-tooltip:before{ border-color: rgba(204, 204, 204, 0); border-left-color: #ccc; border-width: 15px; margin-top: -15px; }
+		.example-set-icons ul .exmp-icon-tooltip > div{ padding: 5px 10px; background: #e3ffc4; }
+		.example-set-icons ul .exmp-icon-tooltip > div:first-child{ border-bottom: 1px solid #ccc; background: #c4fff5; }
+		.example-set-icons ul .exmp-icon-css{ background: #fff; padding: 3px; font-size: 12px; line-height: 18px; color: #000; margin: 0 0 0 20px; display: inline-block; vertical-align: top; }
+		/*set icons end*/
+
+		/*example tabs*/
+		.tabs-wrap{ padding: 5px 5px 20px; }
+		/*tab controls*/
+		.tab-controls-list{ overflow: hidden; padding: 0 0 5px; }
+		.tab-controls-list li{ float: left; margin-right: 6px; }
+		.tab-controls-list a{ text-decoration: none; float: left; padding: 5px 17px; background: #f3cdcd; border-radius: 3px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+		.tab-controls-list a:hover{ box-shadow: none; }
+		.tab-controls-list .active a{ box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); }
+		/*tab controls end*/
+		/*tabs*/
+		.tab{ padding: 5px 17px; background: #f3cdcd; border-radius: 3px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+		/*tabs end*/
+		/*example tabs end*/
+
+		/*example custom select*/
+		.example-select{ width: 250px; }
+		.select-holder{ position: relative; width: 100%; }
+		.select-holder .cselect{ width: 100%; }
+		/*example custom select end*/
+
+		/*example styles for select*/
+		.blue-select,
+		.blue-select *,
+		.blue-select *:before,
+		.blue-select *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: none; }
+		.blue-select { position: relative; margin: 0 5px; border: 2px solid #1caff6; -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; display: inline-block; vertical-align: middle; -webkit-box-shadow: 0 0 10px #92e2ff; -moz-box-shadow: 0 0 10px #92e2ff; box-shadow: 0 0 10px #92e2ff; }
+		.blue-select select { border: none; color: #1caff6; background: transparent; font-size: 18px; -webkit-font-smoothing: antialiased; line-height: 1em; padding: 7px 45px 7px 15px; -webkit-appearance: none; -moz-appearance: none; overflow: hidden; text-indent: 0; text-overflow: ''; white-space: nowrap; cursor: pointer; display: block; width: 100%; }
+		.blue-select:after { position: absolute; right: 2px; top: 2px; display: inline-block; content: ""; width: 14px; height: 8px; margin: 10px 10px 0 0; background: url("//d7mj4aqfscim2.cloudfront.net/images/icon-sprite_mv_be351aab292d684ecc7c1508f97d7266.svg") -210px -70px; pointer-events: none; }
+		/*example styles for select end*/
+
+		/*example-search-form*/
+		.example-search-form{ width: 300px; padding: 0 0 20px; }
+		.example-search-form:before, .example-search-form:after{ content: ""; display: table; }
+		.example-search-form:after{ clear: both; }
+		.example-search-form form{ float: left; width: 100%; }
+		.example-search-form .input-wrap{ padding: 0; position: relative; }
+		.example-search-form .input-wrapper{ padding: 0; }
+		.example-search-form .btn-search-open{ position: absolute; right: 9px; top: 10px; width: 16px; height: 16px; }
+		.example-search-form .btn-search-open .icon-magnifier{ width: 11px; height: 11px; background: #fff; border: 2px solid #afafaf; border-radius: 50%; display: block; position: relative; }
+		.example-search-form .btn-search-open .icon-magnifier:after{ content: ''; position: absolute; right: -6px; bottom: -3px; width: 6px; border: 1px solid #afafaf; border-radius: 1px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); pointer-events: none; }
+		.example-search-form .btn-search-open:hover .icon-magnifier, .example-search-form .btn-search-open:hover .icon-magnifier:after{ border-color: #8f8f8f; }
+		/*example-search-form end*/
+
+		/*example form*/
+		.example-form{ width: 400px; }
+		.example-form:before,
+		.example-form:after{ content: ""; display: table; }
+		.example-form:after{ clear: both; }
+		.example-form form{ float: left; width: 100%; }
+		.example-form .form-row{ margin-right: -20px; }
+		.example-form .form-row:before,
+		.example-form .form-row:after{ content: ""; display: table; }
+		.example-form .form-row:after{ clear: both; }
+		.example-form .form-row .input-wrap{ width: 50%; float: left; }
+		.example-form .form-row .input-wrapper{ margin-right: 20px; }
+		.example-form .btn-submit, .example-form .btn-reset{ font-size: 14px; line-height: 16px; letter-spacing: normal; color: #000; text-transform: uppercase; padding: 5px 8px; border: 1px solid #000; background: #d72828; border-radius: 3px; }
+		.example-form .btn-submit:hover, .example-form .btn-reset:hover{ background: #2828d7; color: #fff; }
+		/*example form end*/
+
+		/*example animate*/
+		.begin-share-tour{ position: relative; }
+		.comment-tip-wrapper { margin: -5px 0 0 -28px; position: absolute; width: 300px; z-index: 400; }
+		.popover.comment-tip { background: none repeat scroll 0 0 #fff; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 5px; bottom: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); display: block; left: auto; padding-bottom: 10px; padding-top: 10px; position: absolute; right: 130px; text-align: center; top: auto; width: 245px; }
+		.popover.top { margin-top: -5px; }
+		.floating { animation-duration: 1.5s; animation-iteration-count: infinite; animation-name: floating; }
+		.cssRunning { animation-play-state: running; }
+		/*example animate end*/
+	</style>
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- header -->
+	<header class="header">
+		<div class="max-wrap">
+			<!-- header holder -->
+			<div class="header-holder">
+				<!-- logo -->
+				<strong class="logo"><a href="#">New Prodject</a></strong>
+				<!-- logo end -->
+				<p>HEADER <br /><br /> Lorem ipsum dolor sit amet, <a href="#">link text</a> consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				<nav class="nav">
+					<ul class="nav-list">
+						<li><a href="#">lorem1</a></li>
+						<li><a href="#">lorem2 has drop</a>
+							<ul>
+								<li><a href="#">loremDrop1</a></li>
+								<li><a href="#">loremDrop2</a></li>
+								<li><a href="#">loremDrop3</a></li>
+								<li><a href="#">loremDrop4</a></li>
+							</ul>
+						</li>
+						<li><a href="#">lorem3</a></li>
+						<li><a href="#">lorem4</a></li>
+						<li><a href="#">lorem5</a></li>
+						<li><a href="#">lorem6</a></li>
+						<li><a href="#">lorem7</a></li>
+						<li><a href="#">lorem8</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- header holder end -->
+		</div>
+	</header>
+	<!-- header end -->
+
+	<!-- main -->
+	<div class="main">
+		<!-- max-wrap -->
+		<div class="max-wrap">
+			<!-- main holder -->
+			<div class="example-set-icons">
+				<h2>Icon</h2>
+				<ul>
+					<li><i class=""></i></li>
+				</ul>
+
+				<h2>Files icons</h2>
+				<ul>
+					<li><i class="depict-files-pdf"></i></li>
+					<li><i class="depict-files-xls"></i></li>
+					<li><i class="depict-files-doc"></i></li>
+					<li><i class="depict-files-zip"></i></li>
+					<li><i class="depict-files-jpg"></i></li>
+					<li><i class=""></i></li>
+				</ul>
+
+				<h2>Social Icons</h2>
+				<ul>
+					<li><i class="depict-icon-arrow-wb"></i></li>
+					<li><i class="depict-icon-arrow-wt"></i></li>
+					<li><i class="depict-icon-arrow-br"></i></li>
+					<li><i class="depict-icon-arrow-bl"></i></li>
+					<li><i class="depict-icon-arrow-bt"></i></li>
+					<li><i class="depict-icon-arrow-bb"></i></li>
+					<li><i class=""></i></li>
+				</ul>
+
+				<h2>Arrows</h2>
+				<ul>
+					<li><i class=""></i></li>
+				</ul>
+
+				<h2>Corner</h2>
+				<ul>
+					<li><i class=""></i></li>
+				</ul>
+
+				<h2>Icon form</h2>
+				<ul>
+					<li><i class=""></i></li>
+				</ul>
+			</div>
+			<!-- main holder end -->
+
+			<!--example main element of content-->
+			<div>
+				<h1>Heading H1</h1>
+				<h2>Heading H2</h2>
+				<h3>Heading H3</h3>
+				<h4>Heading H4</h4>
+				<h5>Heading H5</h5>
+				<h6>Heading H6</h6>
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur.
+						<ul>
+							<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+							<li>Lorem ipsum dolor sit amet, consectetur.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+						</ul>
+					</li>
+					<li><a href="#">Lorem ipsum dolor sit.</a></li>
+				</ul>
+				<ol>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur.
+						<ol>
+							<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+							<li>Lorem ipsum dolor sit amet, consectetur.</li>
+							<li>Lorem ipsum dolor sit amet.</li>
+						</ol>
+					</li>
+					<li><a href="#">Lorem ipsum dolor sit.</a></li>
+				</ol>
+				<p>MAIN CONTENT <br /> <br />Lorem ipsum <a href="#">link text</a> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum <a href="#">link text</a> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<!--example main element of content end-->
+
+			<!--examples blocks-->
+			<div class="examples-blocks" data-able="false">
+				<!--example tabs-->
+				<h2>Example tabs</h2>
+				<div class="tabs-wrap">
+					<!-- tab controls -->
+					<ul class="tab-controls-list">
+						<li class="active"><a href="#">tab1</a></li>
+						<li><a href="#">tab2</a></li>
+						<li><a href="#">tab3</a></li>
+					</ul>
+					<!-- tab controls end -->
+
+					<!-- tabs -->
+					<div class="tabs">
+						<div class="tab">
+							<p>01Lorem ipsum dolor sit amet</p>
+							<p>01Lorem ipsum dolor sit amet</p>
+							<p>01Lorem ipsum dolor sit amet</p>
+						</div>
+
+						<div class="tab">
+							<p>02Lorem ipsum dolor sit amet</p>
+							<p>02Lorem ipsum dolor sit amet</p>
+							<p>02Lorem ipsum dolor sit amet</p>
+							<p>02Lorem ipsum dolor sit amet</p>
+						</div>
+
+						<div class="tab tabs-wrap">
+							<!-- tab controls -->
+							<ul class="tab-controls-list">
+								<li class="active"><a href="#">tab1</a></li>
+								<li><a href="#">tab2</a></li>
+							</ul>
+							<!-- tab controls end -->
+
+							<!-- tabs -->
+							<div class="tabs">
+								<div class="tab">
+									<p>01Lorem ipsum dolor sit amet</p>
+									<p>01Lorem ipsum dolor sit amet</p>
+									<p>01Lorem ipsum dolor sit amet</p>
+								</div>
+
+								<div class="tab">
+									<p>02Lorem ipsum dolor sit amet</p>
+									<p>02Lorem ipsum dolor sit amet</p>
+									<p>02Lorem ipsum dolor sit amet</p>
+									<p>02Lorem ipsum dolor sit amet</p>
+								</div>
+							</div>
+							<!-- tabs end -->
+						</div>
+					</div>
+					<!-- tabs end -->
+				</div>
+				<!--example tabs-->
+
+				<!--example custom select-->
+				<h2>Example custom select</h2>
+				<div class="example-select">
+					<div class="select-holder">
+						<label class="hide-element" for="some-id">Choose Country</label>
+						<select class="cselect" data-placeholder="-- Choose option --" id="some-id">
+							<option class="option-01" data-option="data-option-01">Option 1</option>
+							<option class="option-02" data-option="data-option-02">Option 2</option>
+							<option class="option-03" data-option="data-option-03">Option 3</option>
+							<option class="option-04" data-option="data-option-04">Option 4</option>
+						</select>
+					</div>
+				</div>
+				<!--example custom select end-->
+
+				<!--example styles for select-->
+				<h2>Example styles for the select (no custom)</h2>
+				<div class="example-select">
+					<div class="select-holder">
+						<label class="blue-select no-focus">
+							<select name="mediumSelect" id="options_2">
+								<option class="placeholder" value="">Выберите слово</option>
+								<option value="answers">answers</option>
+								<option value="answer">answer</option>
+							</select>
+						</label>
+
+					</div>
+				</div>
+				<!--example styles for select end-->
+
+				<!--example search form -->
+				<h2>Example search form</h2>
+				<div class="example-search-form">
+					<form action="#" method="get">
+						<fieldset>
+							<div class="input-wrap">
+								<div class="input-wrapper">
+									<input type="search" placeholder="Search text">
+								</div>
+								<div class="btn-search-open">
+									<span class="icon-magnifier"></span>
+									<input type="submit" value="">
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<!-- example search form end -->
+
+				<!--example form-->
+				<h2>Example form</h2>
+				<div class="example-form">
+					<form action="#" method="get">
+						<fieldset>
+							<div class="input-wrap">
+								<div class="label-holder">
+									<label for="example-form-input-01">Text input</label></div>
+								<input type="text" placeholder="input type text" id="example-form-input-01" />
+							</div>
+							<div class="input-wrap">
+								<input class="error" type="email" placeholder="input type email" />
+							</div>
+							<div class="input-wrap">
+								<input type="password" placeholder="input type password" />
+							</div>
+
+							<!--form row-->
+							<div class="form-row">
+								<div class="input-wrap">
+									<div class="input-wrapper">
+										<input type="text" placeholder="type text" />
+									</div>
+								</div>
+
+								<div class="input-wrap">
+									<div class="input-wrapper">
+										<input type="text" placeholder="type text" />
+									</div>
+								</div>
+							</div>
+							<!--form row end-->
+
+							<!--example datepickers-->
+							<h2>Example datepickers from... to...</h2>
+							<div class="datepickers">
+								<div class="datepicker">
+									<input type="text" placeholder="From..." class="date-from" id="reservation-form-from" />
+									<i class="icon-date"></i>
+								</div>
+
+								<div class="datepicker">
+									<input type="text" placeholder="To..." class="date-to" />
+									<i class="icon-date"></i>
+								</div>
+							</div>
+							<!--example datepickers end-->
+
+							<!--textarea-->
+							<div class="input-wrap">
+								<textarea placeholder="this is textarea"></textarea>
+							</div>
+							<!--textarea end-->
+
+							<!--datepicker-->
+							<h2>Example default datepicker</h2>
+							<div class="input-wrap">
+								<div class="input-wrapper datepicker">
+									<input type="text" placeholder="datepicker" />
+									<i class="icon-date"></i>
+								</div>
+							</div>
+							<!--datepicker end-->
+
+							<!--datepicker inline-->
+							<div class="datepicker-inline" style="position: relative; z-index: 999; width: 300px; height: 38px; border: 1px solid #000;"></div>
+							<!--datepicker inline end-->
+
+							<div class="form-buttons">
+								<div class="btn-submit">
+									<span>Submit</span>
+									<input type="submit" value="" />
+								</div>
+								<div class="btn-reset">
+									<span>Reset</span>
+									<input type="reset" value="" />
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<!--example form end-->
+
+				<!--example animate-->
+				<div class="begin-share-tour" style="padding: 150px 0 0;">
+					<!-- bouncy tooltip -->
+					<div class="comment-tip-wrapper">
+						<div class="popover top comment-tip floating cssRunning">
+							<i></i>
+							<div class="arrow"></div>
+							<div class="popover-content">Learn how to explore this design</div>
+						</div>
+					</div>
+					<!-- comment-tip-wrapper -->
+					<div class="helper">?</div>
+				</div>
+				<!--example animate end-->
+			</div>
+			<!--examples blocks end-->
+		</div>
+		<!-- max-wrap end -->
+	</div>
+	<!-- main end -->
+</div>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function () {
+		$('li').each(function (ind, el) {
+			$(el).find('i[class*=white], i[class*=light]').parent().css('background', '#ccc');
+		});
+		$('.example-set-icons').find('i').each(function () {
+			var icon = $(this);
+			var iconWrap = icon.parent();
+			var iconTooltip = $('<div />');
+			iconTooltip.addClass('exmp-icon-tooltip');
+			iconWrap.append(iconTooltip);
+			var iconClass = icon.attr('class');
+
+			var tagIcon = $('<div />');
+			iconTooltip.append(tagIcon);
+			tagIcon.text('<i class="'+iconClass+'"'+'></i>');
+
+			var classIcon = $('<div />');
+			iconTooltip.append(classIcon);
+			classIcon.text('.' + iconClass);
+
+			var iconCss = $('<div />');
+			iconCss.addClass('exmp-icon-css');
+			iconWrap.append(iconCss);
+			var iconCssBGP = icon.css('background-position');
+			var iconCssHeight = icon.css('height');
+			var iconCssWidth = icon.css('width');
+			iconCss.append('<div>' + 'background-position: ' + iconCssBGP + ';</div>');
+			iconCss.append('<div>' + 'height: ' + iconCssHeight + ';</div>');
+			iconCss.append('<div>' + 'width: ' + iconCssWidth + ';</div>');
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@media only screen and (max-width: 767px){}
+h1 {
+	font-size: 30px;
+	line-height: 36px;
+	padding: 0 0 30px;
+}
+.user-content ol{
+	padding: 0;
+}
+
+/*company contacts*/
+.company-contacts .company-info {
+	float: none;
+	width: auto;
+	min-height: 0;
+	margin: 0 0 30px 0;
+}
+.company-info__btn{
+	text-align: center;
+}
+/*company contacts end*/
+
+/*products container*/
+.prod-thumbs {
+	padding: 20px 20px 0;
+}
+.prod-tab-col {
+	display: block;
+	width: auto;
+	padding: 0;
+}
+/*products container end*/

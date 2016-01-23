@@ -1,0 +1,48 @@
+/*icons*/
+[class|="depict-icon"],
+[class*=" depict-icon-"]{
+	background:url(../img/sprite-icons.png) 0 0 no-repeat;
+	display: inline-block;
+	vertical-align: top;
+}
+.depict-icon-arrow-wb{ background-position: 0 0; width: 10px; height: 7px; }
+.depict-icon-arrow-wt{ background-position: 0 -27px; width: 11px; height: 7px; }
+.depict-icon-arrow-br{ background-position: 0 -54px; width: 7px; height: 10px; }
+.depict-icon-arrow-bl{ background-position: 0 -84px; width: 7px; height: 10px; }
+.depict-icon-arrow-bt{ background-position: 0 -114px; width: 10px; height: 7px; }
+.depict-icon-arrow-bb{ background-position: 0 -141px; width: 10px; height: 7px; }
+.depict-icon-local{
+	background: url(../img/depict-local.png) no-repeat;
+	width: 11px;
+	height: 14px;
+}
+[class|="depict-flag"],
+[class*=" depict-flag-"]{
+	display: inline-block;
+	vertical-align: top;
+	width: 18px;
+	height: 13px;
+	box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.6);
+	background: #fff no-repeat;
+}
+.depict-flag-blr{
+	background-image: url(../img/depict-flag-blr.png);
+}
+.depict-flag-de{
+	background-image: url(../img/depict-flag-de.png);
+}
+/*icons end*/
+
+/*depict files*/
+[class|="depict-files"],
+[class*=" depict-files-"]{
+	background:url(../img/sprite-files.png) 0 0 no-repeat;
+	display: inline-block;
+	vertical-align: top;
+}
+.depict-files-pdf{ background-position: 0 0; width: 39px; height: 46px; }
+.depict-files-xls{ background-position: 0 -66px; width: 39px; height: 46px; }
+.depict-files-doc{ background-position: 0 -132px; width: 39px; height: 46px; }
+.depict-files-zip{ background-position: 0 -198px; width: 39px; height: 46px; }
+.depict-files-jpg{ background-position: 0 -264px; width: 39px; height: 46px; }
+/*depict files end*/

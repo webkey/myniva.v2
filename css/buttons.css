@@ -1,0 +1,157 @@
+[class|="btn"],
+[class*=" btn-"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	text-align: center;
+	text-decoration:none;
+}
+[class|="btn"] input[type="submit"],
+[class*=" btn-"] input[type="submit"],
+[class|="btn"] input[type="reset"],
+[class*=" btn-"] input[type="reset"]{
+	background: url("../img/empty.png") repeat;
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	border:0;
+}
+/*style default button*/
+/*btn-default*/
+.btn-default,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button{
+	font: 16px/20px 'gothampro-bold', Arial, Helvetica, sans-serif;
+	color: #fff;
+	padding: 12px 25px;
+	border: 1px solid transparent;
+	background: #d32e2e;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	position: relative;
+}
+.btn-default:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+button:hover{
+	background: #b41e18;
+}
+.btn-default:active{
+	bottom: -1px;
+}
+/*btn-default end*/
+/*btn-default-alt*/
+.btn-default-alt,
+input[type="submit"].btn-default-alt,
+input[type="button"].btn-default-alt,
+input[type="reset"].btn-default-alt{
+	font: 16px/20px 'gothampro-bold', Arial, Helvetica, sans-serif;
+	color: #d32e2e;
+	padding: 12px 18px;
+	border: 1px solid #d32e2e;
+	background: #fff;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	position: relative;
+}
+.btn-default-alt:hover,
+input[type="submit"].btn-default-alt:hover,
+input[type="button"].btn-default-alt:hover,
+input[type="reset"].btn-default-alt:hover{
+	background: #d32e2e;
+	color: #fff;
+}
+.btn-default-alt:active,
+input[type="submit"].btn-default-alt:active,
+input[type="button"].btn-default-alt:active,
+input[type="reset"].btn-default-alt:active{
+	bottom: -1px;
+}
+/*btn-default-alt end*/
+/*btn-default-empty*/
+.btn-default-empty,
+input[type="submit"].btn-default-empty,
+input[type="button"].btn-default-empty,
+input[type="reset"].btn-default-empty{
+	font: 16px/20px 'gothampro-bold', Arial, Helvetica, sans-serif;
+	color: #d32e2e;
+	padding: 12px 18px;
+	border: 1px solid #d32e2e;
+	background: none;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	position: relative;
+}
+.btn-default-empty:hover,
+input[type="submit"].btn-default-empty:hover,
+input[type="button"].btn-default-empty:hover,
+input[type="reset"].btn-default-empty:hover{
+	background: #d32e2e;
+	color: #fff;
+}
+.btn-default-empty:active,
+input[type="submit"].btn-default-empty:active,
+input[type="button"].btn-default-empty:active,
+input[type="reset"].btn-default-empty:active{
+	bottom: -1px;
+}
+/*btn-default-empty end*/
+[class*="btn-"] i{
+	margin-right: 12px;
+	font-size: 19px;
+	line-height: 20px;
+}
+[class*="btn-"] i.fa-envelope{
+	font-size: 19px;
+}
+/*style default button end*/
+/*btn-close*/
+.btn-close{
+	width: 46px;
+	height: 46px;
+	background: #4c4c4c;
+	background: rgba(0, 0, 0, 0.7);
+	cursor: pointer;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+.btn-close:hover{
+	background: #333;
+	background: rgba(0, 0, 0, 0.8);
+}
+.btn-close:before,
+.btn-close:after{
+	content: '';
+	position: absolute;
+	left: 12px;
+	top: 22px;
+	height: 2px;
+	width: 22px;
+	border-right: 1px;
+	background: #fff;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.btn-close:before{
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.btn-close:after{
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/*btn-close end*/
